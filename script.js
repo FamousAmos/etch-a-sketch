@@ -16,7 +16,14 @@ function createGrid(size = 16) {
 }
 
 function changeColor(e) {
-  e.target.style.backgroundColor = "#808080";
+  const red = randomNumber();
+  const green = randomNumber();
+  const blue = randomNumber();
+  e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+function randomNumber() {
+  return Math.floor(Math.random() * 256);
 }
 
 function clearGrid() {
